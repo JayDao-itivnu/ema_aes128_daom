@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="uart_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="uart_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="29917454760fs"></ZoomStartTime>
+      <ZoomEndTime time="33487454761fs"></ZoomEndTime>
+      <Cursor1Time time="32389677170fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="142"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="19" />
+   <wvobject fp_name="/uart_tb/clock" type="logic">
+      <obj_property name="ElementShortName">clock</obj_property>
+      <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/uart_tb/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/uart_tb/rx" type="logic">
+      <obj_property name="ElementShortName">rx</obj_property>
+      <obj_property name="ObjectShortName">rx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/uart_tb/tx" type="logic">
+      <obj_property name="ElementShortName">tx</obj_property>
+      <obj_property name="ObjectShortName">tx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/uart_tb/rx_tick" type="logic">
+      <obj_property name="ElementShortName">rx_tick</obj_property>
+      <obj_property name="ObjectShortName">rx_tick</obj_property>
+   </wvobject>
+   <wvobject fp_name="/uart_tb/tx_tick" type="logic">
+      <obj_property name="ElementShortName">tx_tick</obj_property>
+      <obj_property name="ObjectShortName">tx_tick</obj_property>
+   </wvobject>
+   <wvobject fp_name="/uart_tb/rx_bit_tick" type="logic">
+      <obj_property name="ElementShortName">rx_bit_tick</obj_property>
+      <obj_property name="ObjectShortName">rx_bit_tick</obj_property>
+   </wvobject>
+   <wvobject fp_name="/uart_tb/reg" type="array">
+      <obj_property name="ElementShortName">reg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">reg[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/uart_tb/baud" type="other">
+      <obj_property name="ElementShortName">baud</obj_property>
+      <obj_property name="ObjectShortName">baud</obj_property>
+   </wvobject>
+   <wvobject fp_name="/uart_tb/clock_frequency" type="other">
+      <obj_property name="ElementShortName">clock_frequency</obj_property>
+      <obj_property name="ObjectShortName">clock_frequency</obj_property>
+   </wvobject>
+   <wvobject fp_name="/uart_tb/clock_period" type="other">
+      <obj_property name="ElementShortName">clock_period</obj_property>
+      <obj_property name="ObjectShortName">clock_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/uart_tb/dut/aes_comp/key" type="array">
+      <obj_property name="ElementShortName">key[127:0]</obj_property>
+      <obj_property name="ObjectShortName">key[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/uart_tb/dut/aes_comp/plain" type="array">
+      <obj_property name="ElementShortName">plain[127:0]</obj_property>
+      <obj_property name="ObjectShortName">plain[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/uart_tb/dut/aes_comp/cipher" type="array">
+      <obj_property name="ElementShortName">cipher[127:0]</obj_property>
+      <obj_property name="ObjectShortName">cipher[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/uart_tb/dut/aes_load" type="logic">
+      <obj_property name="ElementShortName">aes_load</obj_property>
+      <obj_property name="ObjectShortName">aes_load</obj_property>
+   </wvobject>
+   <wvobject fp_name="/uart_tb/dut/aes_ready" type="logic">
+      <obj_property name="ElementShortName">aes_ready</obj_property>
+      <obj_property name="ObjectShortName">aes_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/uart_tb/dut/aes_empty" type="logic">
+      <obj_property name="ElementShortName">aes_empty</obj_property>
+      <obj_property name="ObjectShortName">aes_empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/uart_tb/dut/uart_data_in_tmp" type="array">
+      <obj_property name="ElementShortName">uart_data_in_tmp[7:0]</obj_property>
+      <obj_property name="ObjectShortName">uart_data_in_tmp[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/uart_tb/dut/uart_data_in_stb" type="logic">
+      <obj_property name="ElementShortName">uart_data_in_stb</obj_property>
+      <obj_property name="ObjectShortName">uart_data_in_stb</obj_property>
+   </wvobject>
+</wave_config>
