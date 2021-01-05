@@ -290,11 +290,11 @@ begin
                         end if;
                     when tx_send_data =>
                         if tx_baud_tick = '1' then
-                            uart_tx_data <= uart_tx_data_vec(uart_tx_data_vec'high);
+                            uart_tx_data <= uart_tx_data_vec(0);
                             uart_tx_data_vec(
-                                uart_tx_data_vec'high downto 1
-                            ) <= uart_tx_data_vec(
                                 uart_tx_data_vec'high-1 downto 0
+                            ) <= uart_tx_data_vec(
+                                uart_tx_data_vec'high downto 1
                             );
                             if uart_tx_count < 7 then
                                 uart_tx_count <= uart_tx_count + 1;

@@ -10,15 +10,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="29917454760fs"></ZoomStartTime>
-      <ZoomEndTime time="33487454761fs"></ZoomEndTime>
-      <Cursor1Time time="32389677170fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="42001000001fs"></ZoomEndTime>
+      <Cursor1Time time="42001000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="142"></ValueColumnWidth>
+      <ValueColumnWidth column_width="134"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="19" />
+   <WVObjectSize size="21" />
    <wvobject fp_name="/uart_tb/clock" type="logic">
       <obj_property name="ElementShortName">clock</obj_property>
       <obj_property name="ObjectShortName">clock</obj_property>
@@ -88,11 +88,19 @@
       <obj_property name="ObjectShortName">aes_empty</obj_property>
    </wvobject>
    <wvobject fp_name="/uart_tb/dut/uart_data_in_tmp" type="array">
-      <obj_property name="ElementShortName">uart_data_in_tmp[7:0]</obj_property>
-      <obj_property name="ObjectShortName">uart_data_in_tmp[7:0]</obj_property>
+      <obj_property name="ElementShortName">uart_data_in_tmp[0:7]</obj_property>
+      <obj_property name="ObjectShortName">uart_data_in_tmp[0:7]</obj_property>
    </wvobject>
    <wvobject fp_name="/uart_tb/dut/uart_data_in_stb" type="logic">
       <obj_property name="ElementShortName">uart_data_in_stb</obj_property>
       <obj_property name="ObjectShortName">uart_data_in_stb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/uart_tb/dut/key_tmp" type="array">
+      <obj_property name="ElementShortName">key_tmp[127:0]</obj_property>
+      <obj_property name="ObjectShortName">key_tmp[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/uart_tb/dut/cp_tmp" type="array">
+      <obj_property name="ElementShortName">cp_tmp[127:0]</obj_property>
+      <obj_property name="ObjectShortName">cp_tmp[127:0]</obj_property>
    </wvobject>
 </wave_config>

@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Jan  5 17:21:20 2021
+# Process ID: 11884
+# Current directory: C:/Users/daom/Desktop/ema_aes128/ema_aes128.runs/synth_1
+# Command line: vivado.exe -log uart_tb.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source uart_tb.tcl
+# Log file: C:/Users/daom/Desktop/ema_aes128/ema_aes128.runs/synth_1/uart_tb.vds
+# Journal file: C:/Users/daom/Desktop/ema_aes128/ema_aes128.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source uart_tb.tcl -notrace
+Command: synth_design -top uart_tb -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 11860 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 997.613 ; gain = 233.785
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-4169] error in use clause: package 'env' not found in library 'std' [C:/Users/daom/Desktop/ema_aes128/ema_aes128.srcs/sources_1/new/uart_tb.vhd:31]
+INFO: [Synth 8-2810] unit uart_tb ignored due to previous errors [C:/Users/daom/Desktop/ema_aes128/ema_aes128.srcs/sources_1/new/uart_tb.vhd:33]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1068.242 ; gain = 304.414
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+4 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Tue Jan  5 17:21:35 2021...

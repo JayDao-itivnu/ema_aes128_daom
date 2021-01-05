@@ -67,7 +67,7 @@ architecture rtl of top is
     ---------------------------------------------------------------------------
     signal uart_data_in : std_logic_vector(7 downto 0);
     signal uart_data_out : std_logic_vector(7 downto 0);
-    signal uart_data_in_tmp: std_logic_vector(7 downto 0); 
+    signal uart_data_in_tmp: std_logic_vector(0 to 7); 
     signal uart_data_in_stb : std_logic := '0';
     signal uart_data_in_ack : std_logic := '0';
     signal uart_data_out_stb : std_logic := '0';
@@ -76,7 +76,7 @@ architecture rtl of top is
 	 signal temp: std_logic_vector (7 downto 0);
 	 signal key_reg, key_tmp: std_logic_vector (127 downto 0):= (others => '0');
 	 signal pt_reg, pt_tmp : std_logic_vector (127 downto 0):= (others => '0');
-	 signal cp_reg : std_logic_vector (127 downto 0):= (others => '0');
+	 signal cp_reg, cp_tmp : std_logic_vector (127 downto 0):= (others => '0');
 	 
 	 signal aes_empty   : std_logic;         -- Indicates that AES core is not busy  
 	 signal aes_ready   : std_logic;         -- Indicates that Cipher is already
@@ -119,8 +119,8 @@ begin
  
     key_tmp <=  reg(255 downto 128) when aes_load ='1' else key_tmp;
     pt_tmp  <=  reg(127 downto 0)  when aes_load ='1' else pt_tmp;
-    
 
+    uart_data_in_tmp <= cp_tmp(127 downto 120);
     uart_data_in <= uart_data_in_tmp;
 	 wr_control: process (clock)
 
@@ -142,16 +142,21 @@ begin
                 
                 if (aes_ready ='1') then        -- Ready to send the cipher
                     uart_data_in_stb <= '1';
+                    cp_tmp  <=  cp_reg;
                 else
                     uart_data_in_stb <=  uart_data_in_stb;
                 end if;
-                if uart_data_in_ack ='1' then   
-                    if i <16 then           -- Update register for transmitting
+                
+                if uart_data_in_ack ='1' then
+--                    uart_data_in_tmp <= cp_tmp(127 downto 120);   
+                    if i <15 then           -- Update register for transmitting
                         i   <= i+1;
-                        uart_data_in_tmp <= cp_reg ((127-8*i) downto (120-8*i));
+                        cp_tmp(127 downto 0) <= cp_tmp(119 downto 0)&"00000000";
                     else
                         i   <= 0;
                         uart_data_in_stb <= '0';
+                        cp_tmp  <= cp_tmp;
+--                        uart_data_in_tmp <= uart_data_in_tmp;
                     end if;
                 end if;
             end if;    
